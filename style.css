@@ -95,3 +95,21 @@ body {
     padding: 10px 20px;
     font-size: 18px;
 }
+
+/* ========= SMALL PHONES: SHRINK BOARDS ========= */
+
+@media (max-width: 360px) {
+    #ultimate-board {
+        width: 100vw;
+        gap: 2px;
+    }
+
+    .sub-board {
+        border-width: 2px;
+        gap: 1px;
+    }
+
+    .cell {
+        font-size: 1rem;
+    }
+}
