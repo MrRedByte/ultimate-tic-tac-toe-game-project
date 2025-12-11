@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    text-align: center;
+    background-color: #232323;
+    color: #e8e8e8;
+}
+
+.controls {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.mode-buttons button,
+.difficulty-buttons button,
+#reset {
+  padding: 6px 12px;
+  font-size: 15px;
+  border: 1px solid #444;
+  background: #232323;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #e8e8e8;
+}
+
+.mode-buttons button.active,
+.difficulty-buttons button.active {
+  background: #525252;
+  color: #e8e8e8;
+}
+
+.mode-buttons,
+.difficulty-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+
+#ultimate-board {
+    width: 600px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.sub-board {
+    background: #323232;
+    border: 3px solid #444;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-emphasis: strong;
+}
+
+/* Force visible height */
+.sub-board .cell {
+    width: 60px;
+    height: 60px;
+}
+
+.sub-board.disabled {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.cell {
+    border: 1px solid #aaa;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background: #e8e8e8;
+}
+
+.won-X { background: rgba(255, 0, 0, 0.3); }
+.won-O { background: rgba(0, 0, 255, 0.3); }
+
+#reset {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
